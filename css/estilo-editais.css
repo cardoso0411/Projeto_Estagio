@@ -1,0 +1,276 @@
+body {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.navbar {
+    display: flex;
+    flex-flow: nowrap;
+    height: 70px;
+    background: #8a0b0b;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.menu a {
+    transition: .5s;
+    color: #f3f2f8;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 30px;
+    font-weight: bolder;
+}
+
+.menu a:hover {
+    transition: .5s;
+    color: black;
+    background-color: #dd3d3d;
+    border-radius: 5px;
+
+}
+
+/* começo 'Portal de editais' texto*/
+section {
+    margin-top: auto;
+    background-image: url("../img/footer_background.png");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position-y: center;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding-top: 0%;
+}
+
+.headline {
+    margin-left: 10%;
+    flex: 40%;
+}
+
+.headline h2 {
+    font-weight: 900;
+    font-size: 20px;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.headline p {
+    text-align: left;
+}
+
+#total_vagas {
+    display: flex;
+    margin-left: 150px;
+    width: 50px;
+    background: black;
+    padding: 30px;
+    color: white;
+    border-radius: 100%;
+
+
+}
+
+/*começo css footer pagina*/
+footer {
+    cursor: default;
+    margin-top: 0px;
+    height: 210px;
+    text-align: start;
+    background-color: rgb(41, 41, 41);
+    color: white;
+}
+
+.contatos {
+    padding-left: 5px;
+    line-height: 10px;
+}
+
+#dir {
+    display: flex;
+    justify-content: center;
+    font-size: .7em;
+}
+
+/*fim css footer pagina*/
+
+.main-editais {
+    text-align: center;
+    font-weight: bold;
+    width: 75%;
+    margin-left: 12%;
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+
+.ed_area_busca {
+    background: #f1f2f3;
+    border: solid 1px #ddd;
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+    height: 120px;
+}
+
+.busca {
+    text-align: center;
+}
+
+.busca {
+    text-align: center;
+}
+
+.edital1 {
+    padding: 10px;
+    display: inline-block;
+    float: left;
+}
+
+.ano {
+    padding: 10px;
+    display: inline-block;
+    float: left;
+}
+
+.descr {
+    padding: 10px;
+    display: inline-block;
+    float: left;
+}
+
+.data {
+    padding: 10px;
+    display: inline-block;
+    float: left;
+}
+
+.data2 {
+    padding: 10px;
+    display: inline-block;
+    float: left;
+}
+
+.tipo {
+    padding: 10px;
+    display: inline-block;
+    float: left;
+}
+
+.tipo2 {
+    padding: 10px;
+    display: inline-block;
+    float: left;
+}
+
+.um {
+    width: 100px;
+}
+
+.dois {
+    width: 100px;
+}
+
+.tres {
+    width: 470px;
+}
+
+.quatro {
+    width: 50px;
+}
+
+.cinco {
+    width: 50px;
+}
+
+#tipo_arquivo {
+    width: 295px;
+}
+
+/* cadastro edital*/
+/* Estilos para o cabeçalho */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para o formulário */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+select,
+input[type="file"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Garante que a largura definida inclua o padding e a borda */
+}
+
+select {
+    margin-bottom: 20px;
+    /* Aumenta a margem inferior do select */
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+    /* Aumenta a margem inferior do input file */
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+
+/* Estilo para a seção do termo */

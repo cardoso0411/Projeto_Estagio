@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 21cm;
+    min-height: 29.7cm;
+    margin: 1cm auto;
+    padding: 1cm;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+header h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+header p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.termo input[type="text"],
+.termo input[type="email"] {
+    padding: 0.3em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    width: auto;
+    min-width: 100px;
+    max-width: 100%;
+    margin-left: 0.5em;
+    font-size: 1em;
+}
+
+.termo input[type="submit"] {
+    align-self: center;
+    padding: 1em 2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.termo input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.concedente {
+    width: 10%;
+    max-width: 40px;
+}
+
+.cnpj {
+    width: 100%;
+    max-width: 200px;
+}
+
+.endereco_concedente {
+    width: 100%;
+    max-width: 300px;
+}
+
+.nome_representante {
+    width: 100%;
+    max-width: 300px;
+}
+
+.cpf_representante {
+    width: 100%;
+    max-width: 150px;
+}
+
+.nome_estagiario {
+    width: 100%;
+    max-width: 300px;
+}
+
+.rg_estagiario {
+    width: 100%;
+    max-width: 150px;
+}
+
+.endereco_estagiario {
+    width: 100%;
+    max-width: 300px;
+}
+
+.cidade_estagiario {
+    width: 100%;
+    max-width: 200px;
+}
+
+.matricula {
+    width: 100%;
+    max-width: 150px;
+}
+
+.nome {
+    width: 100%;
+    max-width: 300px;
+}
+
+.curso {
+    width: 100%;
+    max-width: 200px;
+}
+
+.semestre {
+    width: 100%;
+    max-width: 100px;
+}
+
+.endereco {
+    width: 100%;
+    max-width: 300px;
+}
+
+.bairro {
+    width: 100%;
+    max-width: 200px;
+}
+
+.telefone {
+    width: 100%;
+    max-width: 150px;
+}
+
+.cep {
+    width: 100%;
+    max-width: 100px;
+}
+
+.cidade {
+    width: 100%;
+    max-width: 200px;
+}
+
+.estado {
+    width: 100%;
+    max-width: 100px;
+}
+
+.email {
+    width: 100%;
+    max-width: 300px;
+}
