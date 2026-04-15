@@ -33,6 +33,12 @@ a {
     text-decoration: none;
 }
 
+button,
+input,
+select {
+    font: inherit;
+}
+
 .site-header {
     background: var(--surface);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -43,6 +49,25 @@ a {
 
 .site-header.compact {
     position: static;
+}
+
+.flash {
+    width: min(calc(100% - 32px), var(--max-width));
+    margin: 20px auto 0;
+    padding: 14px 18px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    font-weight: bold;
+}
+
+.flash-success {
+    background: #e2f3e5;
+    color: #1f6b35;
+}
+
+.flash-error {
+    background: #f9e2e2;
+    color: #8a1e1e;
 }
 
 .brand-strip,
@@ -198,6 +223,7 @@ main {
     border-radius: 12px;
     font-weight: bold;
     border: 2px solid transparent;
+    cursor: pointer;
 }
 
 .button.small {
@@ -416,6 +442,10 @@ main {
 .site-footer h2 {
     color: var(--primary-dark);
     margin-bottom: 10px;
+}
+
+.empty-state {
+    text-align: center;
 }
 
 @media (max-width: 900px) {
