@@ -23,7 +23,7 @@ try {
     $check = $connection->prepare('SELECT id FROM candidaturas WHERE usuario_id = ? AND vaga_id = ? LIMIT 1');
     $check->bind_param('ii', $user['id'], $vagaId);
     $check->execute();
-    $existing = $check->get_result()->fetch_assoc();
+    $existing = statement_select_one($check);
 
     if ($existing) {
         set_flash('error', 'Voce ja se candidatou para essa vaga.');

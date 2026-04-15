@@ -21,7 +21,7 @@ try {
     $statement = $connection->prepare('SELECT * FROM usuarios WHERE email = ? LIMIT 1');
     $statement->bind_param('s', $email);
     $statement->execute();
-    $user = $statement->get_result()->fetch_assoc();
+    $user = statement_select_one($statement);
 
     if (!$user || !password_verify($senha, $user['senha_hash'])) {
         set_flash('error', 'E-mail ou senha invalidos.');

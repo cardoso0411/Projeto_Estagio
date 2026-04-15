@@ -16,7 +16,7 @@ if ($vagaId > 0) {
         $statement = $connection->prepare('SELECT * FROM vagas WHERE id = ? LIMIT 1');
         $statement->bind_param('i', $vagaId);
         $statement->execute();
-        $job = $statement->get_result()->fetch_assoc();
+        $job = statement_select_one($statement);
     } catch (Throwable $exception) {
         $queryError = true;
     }

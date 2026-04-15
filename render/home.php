@@ -11,7 +11,9 @@ $featuredJobs = [];
 try {
     $result = database()->query("SELECT id, titulo, empresa, bolsa, cidade, curso FROM vagas WHERE status = 'aberta' ORDER BY created_at DESC LIMIT 3");
     if ($result) {
-        $featuredJobs = $result->fetch_all(MYSQLI_ASSOC);
+        while ($row = $result->fetch_assoc()) {
+            $featuredJobs[] = $row;
+        }
     }
 } catch (Throwable $exception) {
     $featuredJobs = [];

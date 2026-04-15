@@ -26,3 +26,47 @@ function database(): mysqli
 
     return $connection;
 }
+
+function statement_select_all(mysqli_stmt $statement): array
+{
+    $metadata = $statement->result_metadata();
+
+    if ($metadata === false) {
+        return [];
+    }
+
+    $row = [];
+    $fields = [];
+    $bindValues = [];
+
+    while ($field = $metadata->fetch_field()) {
+        $fields[] = $field->name;
+        $row[$field->name] = null;
+        $bindValues[] = &$row[$field->name];
+    }
+
+    call_user_func_array([$statement, 'bind_result'], $bindValues);
+
+    $results = [];
+
+    while ($statement->fetch()) {
+        $current = [];
+
+        foreach ($fields as $fieldName) {
+            $current[$fieldName] = $row[$fieldName];
+        }
+
+        $results[] = $current;
+    }
+
+    $statement->free_result();
+
+    return $results;
+}
+
+function statement_select_one(mysqli_stmt $statement): ?array
+{
+    $rows = statement_select_all($statement);
+
+    return $rows[0] ?? null;
+}

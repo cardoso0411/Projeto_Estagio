@@ -26,7 +26,7 @@ try {
     $check = $connection->prepare('SELECT id FROM usuarios WHERE email = ? LIMIT 1');
     $check->bind_param('s', $email);
     $check->execute();
-    $existing = $check->get_result()->fetch_assoc();
+    $existing = statement_select_one($check);
 
     if ($existing) {
         set_flash('error', 'Ja existe um usuario cadastrado com esse e-mail.');
@@ -37,12 +37,17 @@ try {
     $statement = $connection->prepare(
         'INSERT INTO usuarios (nome, email, senha_hash, tipo, curso, cidade, ra) VALUES (?, ?, ?, ?, ?, ?, ?)'
     );
+
+    if ($statement === false) {
+        throw new RuntimeException('Falha ao preparar o cadastro do usuario.');
+    }
+
     $statement->bind_param('sssssss', $nome, $email, $passwordHash, $tipo, $curso, $cidade, $ra);
     $statement->execute();
 
     set_flash('success', 'Cadastro realizado com sucesso. Agora voce pode fazer login.');
 } catch (Throwable $exception) {
-    set_flash('error', 'Nao foi possivel cadastrar agora. Verifique a estrutura do banco de dados.');
+    set_flash('error', 'Nao foi possivel cadastrar agora: ' . $exception->getMessage());
 }
 
 redirect_to('../render/login.php');

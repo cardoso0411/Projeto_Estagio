@@ -46,7 +46,7 @@ try {
     }
 
     $statement->execute();
-    $jobs = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
+    $jobs = statement_select_all($statement);
 } catch (Throwable $exception) {
     $queryError = true;
 }

@@ -22,7 +22,7 @@ try {
     );
     $statement->bind_param('i', $user['id']);
     $statement->execute();
-    $applications = $statement->get_result()->fetch_all(MYSQLI_ASSOC);
+    $applications = statement_select_all($statement);
 } catch (Throwable $exception) {
     $queryError = true;
 }
