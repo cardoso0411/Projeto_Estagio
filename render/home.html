@@ -1,67 +1,125 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Um portal de editais da instituição Fatec">
-    <meta name="keywords" content="Portal, Editais, Fatec">
-    <link rel="stylesheet" href="./css/estilo-editais.css">
-    <link rel="icon" type="image/png" href="../../img/favicon.ico" sizes="16x16">
-    <link rel="icon" type="image/png" href="../../img/favicon.ico" sizes="32x32">
-    <title>Portal de Editais - Fatec</title>
+    <meta name="description" content="Portal de estagios da Fatec Itapira">
+    <title>Portal de Estagios - Fatec Itapira</title>
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/portal.css">
 </head>
-
 <body>
-    <div class="logo">
-        <img src="./img/cps.png">
-        <img src="./img/fatec.png">
-        <img src="./img/brasao_sp.jpg">
-    </div>
-
-    <navbar>
-        <nav class="navbar">
-            <div class="menu">
-                <a href="home.html">Pagina Inicial</a>
-                <a id="botao" href="login.html">Login</a>
-            </div>
+    <header class="site-header">
+        <div class="brand-strip">
+            <img src="../img/cps.png" alt="Logo do Centro Paula Souza">
+            <img src="../img/fatec.png" alt="Logo da Fatec Itapira">
+            <img src="../img/brasao_sp.jpg" alt="Brasao do Estado de Sao Paulo">
+        </div>
+        <nav class="main-nav">
+            <a class="active" href="home.html">Inicio</a>
+            <a href="vagas.html">Vagas</a>
+            <a href="login.html">Login</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="aluno.html">Area do Aluno</a>
         </nav>
-    </navbar>
+    </header>
 
-    <section>
-        <h2>Portal de Estagios</h2>
-    </section>
+    <main>
+        <section class="hero">
+            <div class="hero-copy">
+                <span class="tag">Projeto Academico - 2o semestre</span>
+                <h1>Portal de Estagios da Fatec Itapira</h1>
+                <p>Um portal simples para aproximar alunos e empresas, divulgar vagas e acompanhar o inicio do processo de estagio.</p>
+                <div class="actions">
+                    <a class="button primary" href="vagas.html">Ver vagas</a>
+                    <a class="button secondary" href="login.html">Entrar no portal</a>
+                </div>
+            </div>
+            <div class="hero-panel">
+                <img src="../img/Capturar.PNG" alt="Imagem ilustrativa do portal">
+            </div>
+        </section>
 
-    <div class="header">
-        <div class="img-headline">
-            <img style="max-width: 120%;" src="./img/Capturar.PNG">
-        </div>
+        <section class="content-section">
+            <div class="section-heading">
+                <h2>Sobre o portal</h2>
+                <p>Este portal foi pensado para centralizar informacoes basicas sobre estagios, facilitar a busca por vagas e organizar documentos do aluno.</p>
+            </div>
+            <div class="grid three">
+                <article class="card">
+                    <h3>Consulta de vagas</h3>
+                    <p>Os alunos podem visualizar vagas de estagio com informacoes sobre empresa, bolsa, modalidade e requisitos.</p>
+                </article>
+                <article class="card">
+                    <h3>Candidatura simples</h3>
+                    <p>O portal oferece uma forma direta de demonstrar interesse em uma vaga e acompanhar o status da candidatura.</p>
+                </article>
+                <article class="card">
+                    <h3>Documentos do estagio</h3>
+                    <p>Ha uma area dedicada para acompanhar o envio de termo, relatorio parcial e relatorio final.</p>
+                </article>
+            </div>
+        </section>
 
-        <div class="headline">
+        <section class="content-section accent">
+            <div class="section-heading">
+                <h2>Vagas em destaque</h2>
+                <p>Exemplos de oportunidades que podem aparecer no portal.</p>
+            </div>
+            <div class="grid three">
+                <article class="job-card">
+                    <span class="badge">TI</span>
+                    <h3>Estagio em Desenvolvimento Web</h3>
+                    <p>Empresa: Tech Itapira</p>
+                    <p>Bolsa: R$ 950,00</p>
+                    <p>Cidade: Itapira - SP</p>
+                    <a class="text-link" href="vaga.html">Saiba mais</a>
+                </article>
+                <article class="job-card">
+                    <span class="badge">Administracao</span>
+                    <h3>Estagio em Processos Administrativos</h3>
+                    <p>Empresa: Solucoes Prime</p>
+                    <p>Bolsa: R$ 800,00</p>
+                    <p>Cidade: Mogi Guacu - SP</p>
+                    <a class="text-link" href="vaga.html">Saiba mais</a>
+                </article>
+                <article class="job-card">
+                    <span class="badge">Suporte</span>
+                    <h3>Estagio em Suporte Tecnico</h3>
+                    <p>Empresa: Conecta Sistemas</p>
+                    <p>Bolsa: R$ 900,00</p>
+                    <p>Cidade: Itapira - SP</p>
+                    <a class="text-link" href="vaga.html">Saiba mais</a>
+                </article>
+            </div>
+        </section>
 
-            <h2>O portal de estágios da Fatec</h2>
-            <p>É a porta de entrada para oportunidades profissionais e experiências
-                enriquecedoras, guiando os estudantes rumo ao sucesso.</p>
-            <p>Explorar o portal de estágios da Fatec é como abrir as portas do futuro
-                profissional, conectando os alunos com oportunidades que moldarão suas trajetórias.</p>
-            <p>Com o portal de estágios da Fatec, os estudantes encontram um universo de possibilidades
-                para desenvolverem suas habilidades e conquistarem experiências valiosas no mercado de trabalho.</p>
-        </div>
-    </div>
+        <section class="content-section">
+            <div class="section-heading">
+                <h2>Como funciona</h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <strong>1.</strong>
+                    <p>O aluno acessa o portal e consulta as vagas disponiveis.</p>
+                </div>
+                <div class="step">
+                    <strong>2.</strong>
+                    <p>Depois do login, ele pode se candidatar a uma oportunidade.</p>
+                </div>
+                <div class="step">
+                    <strong>3.</strong>
+                    <p>Na area do aluno, acompanha candidaturas e documentos.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <footer>
-        <div class="logo-rodape">
-            <h1 class="agencia">Fatec Itapira</h1>
-            <p> Endereço: Rua Tereza Lera Paoletti, 570/590 - Jardim Bela Vista</p>
-            <p> CEP: 13974-080</p>
-            <p>Telefones: (19) 3843-1996</p>
-            <p> Whatsapp: (19) 98933-6291 | (19) 3863-5210</p>
-            <p> E-mail: contato@fatecitapira.edu.br</p>
-        </div>
+    <footer class="site-footer">
+        <h2>Fatec Itapira</h2>
+        <p>Rua Tereza Lera Paoletti, 570/590 - Jardim Bela Vista</p>
+        <p>CEP: 13974-080 | Telefone: (19) 3843-1996</p>
+        <p>E-mail: contato@fatecitapira.edu.br</p>
     </footer>
-    <b id="dir">© Todos os direitos reservados.</b>
-
 </body>
-
 </html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area do Aluno - Portal de Estagios</title>
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body>
+    <header class="site-header compact">
+        <div class="brand-strip">
+            <img src="../img/fatec.png" alt="Logo da Fatec Itapira">
+            <img src="../img/brasao_sp.jpg" alt="Brasao do Estado de Sao Paulo">
+        </div>
+        <nav class="main-nav">
+            <a href="home.html">Inicio</a>
+            <a href="vagas.html">Vagas</a>
+            <a href="login.html">Login</a>
+            <a class="active" href="aluno.html">Area do Aluno</a>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="content-section">
+            <div class="section-heading">
+                <h1>Area do aluno</h1>
+                <p>Painel simples para mostrar dados, candidaturas e documentos do estagio.</p>
+            </div>
+
+            <div class="grid two">
+                <article class="card">
+                    <h2>Dados do aluno</h2>
+                    <p><strong>Nome:</strong> Joao da Silva</p>
+                    <p><strong>Curso:</strong> Analise e Desenvolvimento de Sistemas</p>
+                    <p><strong>RA:</strong> 123456789</p>
+                    <p><strong>E-mail:</strong> joao@fatec.sp.gov.br</p>
+                </article>
+
+                <article class="card">
+                    <h2>Resumo</h2>
+                    <p><strong>Candidaturas realizadas:</strong> 2</p>
+                    <p><strong>Status atual:</strong> Em analise</p>
+                    <p><strong>Documentos pendentes:</strong> 1</p>
+                    <p><strong>Ultimo acesso:</strong> 14/04/2026</p>
+                </article>
+            </div>
+
+            <div class="content-block">
+                <h2>Minhas candidaturas</h2>
+                <table class="portal-table">
+                    <thead>
+                        <tr>
+                            <th>Vaga</th>
+                            <th>Empresa</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Desenvolvimento Web</td>
+                            <td>Tech Itapira</td>
+                            <td><span class="status status-warn">Em analise</span></td>
+                        </tr>
+                        <tr>
+                            <td>Suporte Tecnico</td>
+                            <td>Conecta Sistemas</td>
+                            <td><span class="status status-ok">Aprovado para entrevista</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-block">
+                <h2>Documentos</h2>
+                <div class="grid three">
+                    <article class="doc-card">
+                        <h3>Termo de compromisso</h3>
+                        <p>Status: Enviado</p>
+                        <a class="text-link" href="#">Visualizar</a>
+                    </article>
+                    <article class="doc-card">
+                        <h3>Relatorio parcial</h3>
+                        <p>Status: Pendente</p>
+                        <a class="text-link" href="#">Enviar</a>
+                    </article>
+                    <article class="doc-card">
+                        <h3>Relatorio final</h3>
+                        <p>Status: Aguardando</p>
+                        <a class="text-link" href="#">Detalhes</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

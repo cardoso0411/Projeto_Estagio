@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Portal de Estagios</title>
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body>
+    <header class="site-header compact">
+        <div class="brand-strip">
+            <img src="../img/cps.png" alt="Logo do Centro Paula Souza">
+            <img src="../img/fatec.png" alt="Logo da Fatec Itapira">
+        </div>
+        <nav class="main-nav">
+            <a href="home.html">Inicio</a>
+            <a href="vagas.html">Vagas</a>
+            <a class="active" href="login.html">Login</a>
+            <a href="cadastro.html">Cadastro</a>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="form-shell">
+            <div class="section-heading">
+                <h1>Login do portal</h1>
+                <p>Acesso simples para alunos e empresas.</p>
+            </div>
+            <form class="portal-form">
+                <label for="email">E-mail</label>
+                <input id="email" type="email" placeholder="Digite seu e-mail">
+
+                <label for="senha">Senha</label>
+                <input id="senha" type="password" placeholder="Digite sua senha">
+
+                <label for="perfil">Perfil</label>
+                <select id="perfil">
+                    <option>Aluno</option>
+                    <option>Empresa</option>
+                </select>
+
+                <div class="notice">Projeto demonstrativo: o acesso e simulado para fins academicos.</div>
+
+                <div class="actions">
+                    <a class="button primary" href="aluno.html">Entrar</a>
+                    <a class="button secondary" href="cadastro.html">Criar conta</a>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

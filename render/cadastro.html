@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Portal de Estagios</title>
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body>
+    <header class="site-header compact">
+        <div class="brand-strip">
+            <img src="../img/fatec.png" alt="Logo da Fatec Itapira">
+            <img src="../img/brasao_sp.jpg" alt="Brasao do Estado de Sao Paulo">
+        </div>
+        <nav class="main-nav">
+            <a href="home.html">Inicio</a>
+            <a href="vagas.html">Vagas</a>
+            <a href="login.html">Login</a>
+            <a class="active" href="cadastro.html">Cadastro</a>
+        </nav>
+    </header>
+
+    <main class="page-main">
+        <section class="form-shell wide">
+            <div class="section-heading">
+                <h1>Cadastro no portal</h1>
+                <p>Formulario simples para demonstrar o cadastro de aluno ou empresa.</p>
+            </div>
+
+            <div class="tabs">
+                <span class="tab active">Aluno</span>
+                <span class="tab">Empresa</span>
+            </div>
+
+            <form class="portal-form two-columns">
+                <label for="nome">Nome completo</label>
+                <input id="nome" type="text" placeholder="Digite seu nome">
+
+                <label for="ra">RA</label>
+                <input id="ra" type="text" placeholder="Digite seu RA">
+
+                <label for="curso">Curso</label>
+                <input id="curso" type="text" placeholder="Digite seu curso">
+
+                <label for="email-cadastro">E-mail</label>
+                <input id="email-cadastro" type="email" placeholder="Digite seu e-mail">
+
+                <label for="senha-cadastro">Senha</label>
+                <input id="senha-cadastro" type="password" placeholder="Crie uma senha">
+
+                <label for="cidade">Cidade</label>
+                <input id="cidade" type="text" placeholder="Digite sua cidade">
+
+                <div class="full-row actions">
+                    <a class="button primary" href="login.html">Cadastrar</a>
+                    <a class="button secondary" href="home.html">Voltar</a>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
