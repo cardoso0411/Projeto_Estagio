@@ -49,9 +49,15 @@ require_once __DIR__ . '/../partials/header.php';
             <article class="card">
                 <h2>Resumo</h2>
                 <p><strong>Candidaturas realizadas:</strong> <?= count($applications) ?></p>
-                <p><strong>Status medio:</strong> <?= count($applications) ? 'Acompanhando vagas' : 'Sem candidaturas ainda' ?></p>
-                <p><strong>Documentos pendentes:</strong> 1</p>
-                <p><strong>Perfil:</strong> <?= htmlspecialchars($user['tipo']) ?></p>
+                <?php
+                $aprovadas = count(array_filter($applications, fn($app) => $app['status'] === 'Aprovado'));
+                $reprovadas = count(array_filter($applications, fn($app) => $app['status'] === 'Reprovado'));
+                $emAnalise = count(array_filter($applications, fn($app) => $app['status'] === 'Em analise'));
+                ?>
+                <p><strong>Aprovadas:</strong> <?= $aprovadas ?></p>
+                <p><strong>Reprovadas:</strong> <?= $reprovadas ?></p>
+                <p><strong>Em análise:</strong> <?= $emAnalise ?></p>
+                <p><strong>Perfil:</strong> Aluno</p>
             </article>
         </div>
 
@@ -75,7 +81,7 @@ require_once __DIR__ . '/../partials/header.php';
                             <tr>
                                 <td><?= htmlspecialchars($application['titulo']) ?></td>
                                 <td><?= htmlspecialchars($application['empresa']) ?></td>
-                                <td><span class="status status-warn"><?= htmlspecialchars($application['status']) ?></span></td>
+                                <td><span class="status status-<?= $application['status'] === 'Aprovado' ? 'ok' : ($application['status'] === 'Reprovado' ? 'danger' : 'warn') ?>"><?= htmlspecialchars($application['status']) ?></span></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

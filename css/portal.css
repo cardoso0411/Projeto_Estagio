@@ -208,6 +208,11 @@ main {
     color: #1f6b35;
 }
 
+.status-danger {
+    background: #f9e2e2;
+    color: #8a1e1e;
+}
+
 .actions {
     display: flex;
     flex-wrap: wrap;

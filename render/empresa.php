@@ -118,6 +118,11 @@ require_once __DIR__ . '/../partials/header.php';
                                     <button class="button danger small" type="submit">Excluir</button>
                                 </form>
                             </div>
+                            <?php if ((int) $vacancy['candidatos'] > 0): ?>
+                                <div class="actions" style="margin-top: 8px;">
+                                    <a class="button primary small" href="../render/candidatos.php?vaga_id=<?= (int) $vacancy['id'] ?>">Ver candidatos</a>
+                                </div>
+                            <?php endif; ?>
                         </article>
                     <?php endforeach; ?>
                 </div>
