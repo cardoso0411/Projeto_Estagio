@@ -46,12 +46,12 @@ function is_logged_in(): bool
 
 function is_company(): bool
 {
-    return current_user()['tipo'] ?? '' === 'empresa';
+    return (current_user()['tipo'] ?? '') === 'empresa';
 }
 
 function is_student(): bool
 {
-    return current_user()['tipo'] ?? '' === 'aluno';
+    return (current_user()['tipo'] ?? '') === 'aluno';
 }
 
 function require_login(): void
