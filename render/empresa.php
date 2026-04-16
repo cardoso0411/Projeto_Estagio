@@ -110,7 +110,14 @@ require_once __DIR__ . '/../partials/header.php';
                             <p>Cidade: <?= htmlspecialchars($vacancy['cidade']) ?></p>
                             <p>Modalidade: <?= htmlspecialchars($vacancy['modalidade']) ?></p>
                             <p>Candidatos: <?= (int) $vacancy['candidatos'] ?></p>
-                            <a class="button secondary small" href="../render/vaga.php?id=<?= (int) $vacancy['id'] ?>">Ver detalhes</a>
+                            <div class="actions">
+                                <a class="button secondary small" href="../render/vaga.php?id=<?= (int) $vacancy['id'] ?>">Ver detalhes</a>
+                                <a class="button secondary small" href="../render/editar_vaga.php?id=<?= (int) $vacancy['id'] ?>">Editar</a>
+                                <form method="post" action="../actions/delete_vaga.php" style="display:inline-block; margin:0;">
+                                    <input type="hidden" name="vaga_id" value="<?= (int) $vacancy['id'] ?>">
+                                    <button class="button danger small" type="submit">Excluir</button>
+                                </form>
+                            </div>
                         </article>
                     <?php endforeach; ?>
                 </div>

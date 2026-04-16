@@ -250,6 +250,16 @@ main {
     color: var(--primary-dark);
 }
 
+.button.danger {
+    background: #e86a6a;
+    color: #ffffff;
+    border-color: #e86a6a;
+}
+
+.button.danger:hover {
+    background: #c24f4f;
+}
+
 .content-section {
     padding: 24px 0;
 }
@@ -461,6 +471,15 @@ main {
 
     .hero-panel {
         min-height: 220px;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .button {
+        width: 100%;
     }
 }
 
