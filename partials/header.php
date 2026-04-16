@@ -30,7 +30,11 @@ $user = current_user();
             <a class="<?= $activePage === 'home' ? 'active' : '' ?>" href="../render/home.php">Inicio</a>
             <a class="<?= $activePage === 'vagas' ? 'active' : '' ?>" href="../render/vagas.php">Vagas</a>
             <?php if ($user): ?>
-                <a class="<?= $activePage === 'aluno' ? 'active' : '' ?>" href="../render/aluno.php">Area do Aluno</a>
+                <?php if ($user['tipo'] === 'empresa'): ?>
+                    <a class="<?= $activePage === 'empresa' ? 'active' : '' ?>" href="../render/empresa.php">Area da Empresa</a>
+                <?php else: ?>
+                    <a class="<?= $activePage === 'aluno' ? 'active' : '' ?>" href="../render/aluno.php">Area do Aluno</a>
+                <?php endif; ?>
                 <a href="../actions/logout.php">Sair</a>
             <?php else: ?>
                 <a class="<?= $activePage === 'login' ? 'active' : '' ?>" href="../render/login.php">Login</a>

@@ -44,10 +44,40 @@ function is_logged_in(): bool
     return current_user() !== null;
 }
 
+function is_company(): bool
+{
+    return current_user()['tipo'] ?? '' === 'empresa';
+}
+
+function is_student(): bool
+{
+    return current_user()['tipo'] ?? '' === 'aluno';
+}
+
 function require_login(): void
 {
     if (!is_logged_in()) {
         set_flash('error', 'Faca login para acessar essa area.');
+        redirect_to('../render/login.php');
+    }
+}
+
+function require_company(): void
+{
+    require_login();
+
+    if (!is_company()) {
+        set_flash('error', 'Acesso restrito a empresas.');
+        redirect_to('../render/login.php');
+    }
+}
+
+function require_student(): void
+{
+    require_login();
+
+    if (!is_student()) {
+        set_flash('error', 'Acesso restrito a alunos.');
         redirect_to('../render/login.php');
     }
 }

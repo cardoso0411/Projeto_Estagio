@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../config/auth.php';
 
-require_login();
+require_student();
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     redirect_to('../render/vagas.php');

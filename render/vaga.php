@@ -48,11 +48,13 @@ require_once __DIR__ . '/../partials/header.php';
                     <p><strong>Modalidade:</strong> <?= htmlspecialchars($job['modalidade']) ?></p>
                     <p><strong>Descricao:</strong> <?= htmlspecialchars($job['descricao']) ?></p>
                     <div class="actions">
-                        <?php if (is_logged_in()): ?>
+                        <?php if (is_logged_in() && is_student()): ?>
                             <form method="post" action="../actions/apply.php">
                                 <input type="hidden" name="vaga_id" value="<?= (int) $job['id'] ?>">
                                 <button class="button primary" type="submit">Candidatar-se</button>
                             </form>
+                        <?php elseif (is_logged_in()): ?>
+                            <p class="info">Somente alunos podem se candidatar. Use a área da empresa para gerenciar vagas.</p>
                         <?php else: ?>
                             <a class="button primary" href="../render/login.php">Entrar para se candidatar</a>
                         <?php endif; ?>

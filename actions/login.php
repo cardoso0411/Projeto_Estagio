@@ -30,6 +30,11 @@ try {
 
     login_user($user);
     set_flash('success', 'Login realizado com sucesso.');
+
+    if ($user['tipo'] === 'empresa') {
+        redirect_to('../render/empresa.php');
+    }
+
     redirect_to('../render/aluno.php');
 } catch (Throwable $exception) {
     set_flash('error', 'Nao foi possivel fazer login. Verifique a conexao com o banco.');

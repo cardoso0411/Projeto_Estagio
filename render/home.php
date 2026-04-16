@@ -30,7 +30,11 @@ require_once __DIR__ . '/../partials/header.php';
             <div class="actions">
                 <a class="button primary" href="../render/vagas.php">Ver vagas</a>
                 <?php if (is_logged_in()): ?>
-                    <a class="button secondary" href="../render/aluno.php">Ir para a area do aluno</a>
+                    <?php if (is_company()): ?>
+                        <a class="button secondary" href="../render/empresa.php">Ir para a area da empresa</a>
+                    <?php else: ?>
+                        <a class="button secondary" href="../render/aluno.php">Ir para a area do aluno</a>
+                    <?php endif; ?>
                 <?php else: ?>
                     <a class="button secondary" href="../render/login.php">Entrar no portal</a>
                 <?php endif; ?>
