@@ -37,10 +37,3 @@ Projeto academico de portal de estagios da Fatec Itapira.
 4. Empresa vê candidatos na área da empresa
 5. Empresa pode aprovar ou reprovar a candidatura
 6. Aluno vê o status atualizado na área do aluno
-
-## Próximas melhorias possíveis
-- Upload de documentos (termo, relatório parcial/final)
-- Relatórios de vagas por curso/cidade
-- Notificações por e-mail
-- Perfil de empresa com upload de logo
-- Sistema de chat entre aluno e empresa
