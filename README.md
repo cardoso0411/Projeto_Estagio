@@ -1,5 +1,5 @@
 # Projeto_Estagio
-Projeto academico de portal de estagios da Fatec Itapira.
+Projeto academico portal de estagios da Fatec Itapira no 3° Semestre
 
 ## Estrutura atual
 - `index.php`: entrada principal do projeto
